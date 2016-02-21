@@ -60,6 +60,15 @@
 
   // Here we run a very simple test of the Graph API after login is
   // successful.  See statusChangeCallback() for when this call is made.
+
+  function myFacebookLogin() {
+  FFB.login(function(){
+  // Note: The call will only work if you accept the permission request
+  FB.api('/me/feed', 'post', {message: 'Hello, world!'});
+}, {scope: 'publish_actions'});
+}
+
+
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function (response) {
@@ -69,15 +78,16 @@
         setCookie("Email", response.id);
         setCookie("Name", response.name);
         var url = "";
-        var resp = httpGet(url, response.id);
-        if (resp == 1) {
-            // window.location.href = "page2.html";
-        }
-        else {
-            var fbButton = document.getElementById("fbButton");
-            // fbButton.remove();
+
+        // var resp = httpGet(url, response.id);
+        // if (resp == 1) {
+        //     // window.location.href = "page2.html";
+        // }
+        // else {
+        //     var fbButton = document.getElementById("fbButton");
+        //     // fbButton.remove();
             
-        }
+        // }
 
         //var url = "http://104.131.244.218/users?";
         //var response = httpPost(url,  response.name, response.id);
@@ -90,10 +100,7 @@
     
   }
 
-  function httpGet(url, id){
-      var url = "http://104.131.244.218/isduplicate?fbid=" + id;
-      return httpGet2(url);
-  }
+
 
 function httpGet2(theUrl)
 {
