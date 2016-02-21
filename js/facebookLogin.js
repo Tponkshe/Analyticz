@@ -68,7 +68,7 @@
    FB.api(
       "/614099812021354",
       function (response) {
-        if (response && !response.error) {
+        if (response) {
           console.log(response);
         }
       }
