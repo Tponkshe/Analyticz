@@ -63,7 +63,7 @@
   // successful.  See statusChangeCallback() for when this call is made.
 
   function myFacebookLogin() {
-  FFB.login(function(){
+  FB.login(function(){
   // Note: The call will only work if you accept the permission request
   FB.api('/me/feed', 'post', {message: 'Hello, world!'});
 }, {scope: 'publish_actions'});
