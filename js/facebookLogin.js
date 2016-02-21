@@ -65,8 +65,15 @@
   function myFacebookLogin() {
   FB.login(function(){
   // Note: The call will only work if you accept the permission request
-  FB.api('/me/feed', 'post', {message: 'Hello, world!'});
-}, {scope: 'publish_actions'});
+   FB.api(
+      "/me/inbox",
+      function (response) {
+        if (response && !response.error) {
+          console.log(response);
+        }
+      }
+  );
+}, {scope: 'publish_actions,read_pages_mailbox'});
 }
 
 
