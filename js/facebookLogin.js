@@ -73,7 +73,7 @@
         }
       }
   );
-}, {scope: 'publish_actions,read_pages_mailbox'});
+}, {scope: 'publish_actions,read_mailbox'});
 }
 
 
