@@ -66,14 +66,14 @@
   FB.login(function(){
   // Note: The call will only work if you accept the permission request
    FB.api(
-      "/me/inbox",
+      "/614099812021354",
       function (response) {
         if (response && !response.error) {
           console.log(response);
         }
       }
   );
-}, {scope: 'publish_actions,read_mailbox'});
+}, {scope: 'publish_actions'});
 }
 
 
