@@ -1,3 +1,3 @@
 # Analyticz
 
-A fb messeaging analyticz extension for chrome.
+A fb messeaging analytics extension for chrome.
